@@ -5,12 +5,18 @@
  */
 
 import React, { Component } from 'react';
+import Amplify, { Auth } from 'aws-amplify';
+import aws_exports from './aws-exports';
+import { withAuthenticator, Authenticator, SignIn, SignUp, ConfirmSignUp, Greetings } from 'aws-amplify-react-native';
 import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Button,
 } from 'react-native';
+
+// Amplify.configure(aws_exports);
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -19,8 +25,64 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+
+
+
+
+Amplify.configure({
+    Auth: {
+        identityPoolId: 'us-east-1:6ffac2f7-ecf8-4163-a7c2-2d253e6290ca', 
+        region: 'us-east-1', 
+        userPoolId: 'us-east-1_UmHBzvEMi', 
+        userPoolWebClientId: '14lf22uqvlkfpa1cs37ki15t6a', 
+    },
+});
+
+
+
+
+  
+
+
 type Props = {};
-export default class App extends Component<Props> {
+class App extends Component<Props> {
+
+  _onButtnSignInPress(){
+    console.log("XXXX SignIn");
+
+      const data = await async Auth.signIn("mytest", "111111_Test");
+      // console.log("XXXXX data:" + JSON.stringify(data));
+      // if (data.signInUserSession === null) {
+      //   this.setState({ user: data, loading: false, modalShowing: true });
+      // }
+
+    // Auth.signIn("mytest", "111111_Test")
+    // .then(user => console.log("XXXXX user:"+ JSON.stringinf(user)))
+    // .catch(err => console.log("XXXXX err:" + JSON.stringify(err)));
+
+  }
+
+  _onButtonSignUpPress(){
+    console.log("XXXX SignUp");
+    Auth.signUp( {
+        username:"testuser2",
+        password:"123456_Test2",
+        attributes: {
+          phone:"886922888123",
+          email:"sotagill@gmail.com",
+        }
+    }).then(res => {
+      // console.log("XXX signed up:" + JSON.stringify(res));
+      console.log("XXX signed up success!!");
+    }).catch(err=>{
+      console.log("XXX err:" + JSON.stringify(err));
+    })
+
+  }
+
+
+
+  
   render() {
     return (
       <View style={styles.container}>
@@ -33,6 +95,8 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <Button onPress={this._onButtonSignUpPress} title="Sign Up !!!"/>
+        <Button onPress={this._onButtnSignInPress} title="Sign IN"/>
       </View>
     );
   }
@@ -56,3 +120,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+ // export default App;
+module.exports = App;
+// export default withAuthenticator(App);

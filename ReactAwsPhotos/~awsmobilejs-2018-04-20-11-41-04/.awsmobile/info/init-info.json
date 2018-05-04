@@ -1,0 +1,56 @@
+{
+	"projectPath": "/Users/jim_j_wu/dev/innovation/AwsPhotos/ReactAwsPhotos",
+	"mobileProjectID": "1c7b8a3c-8528-46b4-8387-afb41286e1ad",
+	"backupAWSMobileJSDirPath": "/Users/jim_j_wu/dev/innovation/AwsPhotos/ReactAwsPhotos/~awsmobilejs-2018-04-20-11-40-18",
+	"projectInfo": {
+		"ProjectName": "ReactAwsPhotos",
+		"ProjectPath": "/Users/jim_j_wu/dev/innovation/AwsPhotos/ReactAwsPhotos",
+		"InitializationTime": "",
+		"LastConfigurationTime": "",
+		"LastNPMInstallTime": "",
+		"FrontendLastBuildTime": "",
+		"LastPublishTime": "",
+		"BackendLastSyncTime": "",
+		"BackendLastBuildTime": "",
+		"BackendLastPushTime": "",
+		"BackendProjectID": "",
+		"BackendProjectName": "",
+		"BackendProjectConsoleUrl": "",
+		"BackendProjectCreationTime": "",
+		"BackendProjectLastUpdatedTime": "",
+		"Framework": "react-native"
+	},
+	"projectConfig": {
+		"SourceDir": "./",
+		"DistributionDir": "./",
+		"BuildCommand": "npm run-script build",
+		"StartCommand": "npm run-script start"
+	},
+	"packageJson": {
+		"name": "ReactAwsPhotos",
+		"version": "0.0.1",
+		"private": true,
+		"scripts": {
+			"start": "node node_modules/react-native/local-cli/cli.js start",
+			"test": "jest"
+		},
+		"dependencies": {
+			"aws-amplify-react-native": "^0.2.9",
+			"awsmobile-cli": "^1.1.1",
+			"react": "16.3.1",
+			"react-native": "0.55.3"
+		},
+		"devDependencies": {
+			"babel-jest": "22.4.3",
+			"babel-preset-react-native": "4.0.0",
+			"jest": "22.4.3",
+			"react-test-renderer": "16.3.1"
+		},
+		"jest": {
+			"preset": "react-native"
+		}
+	},
+	"framework": "react-native",
+	"initialStage": "invalid",
+	"strategy": "link"
+}

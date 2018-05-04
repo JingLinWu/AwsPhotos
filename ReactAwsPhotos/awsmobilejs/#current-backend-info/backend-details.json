@@ -1,0 +1,106 @@
+{
+	"name": "ReactAwsPhotos-2018-04-20-11-45-22",
+	"projectId": "c3f3b999-f55f-4d7b-a129-4131083b0d1c",
+	"region": "us-west-1",
+	"state": "NORMAL",
+	"createdDate": "2018-04-20T03:45:25.582Z",
+	"lastUpdatedDate": "2018-04-20T06:58:30.554Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/c3f3b999-f55f-4d7b-a129-4131083b0d1c/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "reactawsphotos20180420114522_MobileHub",
+			"arn": "70cbd089587041b9aee0ecd2293dd2e6",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "42b5a13b-444d-11e8-9652-e3aff64cb62a"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactawsphotos_mobileanalytics_MOBILEHUB_1309242448",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "397d7214-4468-11e8-a6ba-477d1aa8a802",
+				"role": "reactawsphotos_auth_MOBILEHUB_1309242448"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "reactawsphotos_MOBILEHUB_1309242448",
+			"arn": "us-west-2:9d316192-e301-4ff0-9aa6-2bb63115d659",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "397d7214-4468-11e8-a6ba-477d1aa8a802",
+				"poolid": "us-west-2:9d316192-e301-4ff0-9aa6-2bb63115d659",
+				"roleARNs": "arn:aws:iam::460450747530:role/reactawsphotos_auth_MOBILEHUB_1309242448"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "reactawsphotos_auth_MOBILEHUB_1309242448",
+			"arn": "arn:aws:iam::460450747530:role/reactawsphotos_auth_MOBILEHUB_1309242448",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "397d7214-4468-11e8-a6ba-477d1aa8a802"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "reactawsphotos-hosting-mobilehub-1309242448",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "42b5a13b-444d-11e8-9652-e3aff64cb62a",
+				"region": "us-west-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/reactawsphotos-hosting-mobilehub-1309242448",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/reactawsphotos-hosting-mobilehub-1309242448"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d2mlwbj3wrllfb.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E14BAFQXPBK1N3",
+				"lastUpdateRequestID": "42b5a13b-444d-11e8-9652-e3aff64cb62a"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "reactawsphotos_hosting_MOBILEHUB_1309242448",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "397d7214-4468-11e8-a6ba-477d1aa8a802",
+				"role": "reactawsphotos_auth_MOBILEHUB_1309242448"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "reactawsphotos-deployments-mobilehub-1309242448",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-west-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/reactawsphotos-deployments-mobilehub-1309242448"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-west-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}

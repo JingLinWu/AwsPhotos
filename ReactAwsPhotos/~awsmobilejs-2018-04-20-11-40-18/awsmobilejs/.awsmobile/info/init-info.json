@@ -1,0 +1,23 @@
+{
+	"projectPath": "/Users/jim_j_wu/dev/innovation/AwsPhotos/ReactAwsPhotos/awsmobilejs",
+	"mobileProjectID": "1c7b8a3c-8528-46b4-8387-afb41286e1ad",
+	"projectInfo": {
+		"ProjectName": "awsmobilejs",
+		"ProjectPath": "/Users/jim_j_wu/dev/innovation/AwsPhotos/ReactAwsPhotos/awsmobilejs",
+		"InitializationTime": "",
+		"LastConfigurationTime": "",
+		"LastNPMInstallTime": "",
+		"FrontendLastBuildTime": "",
+		"LastPublishTime": "",
+		"BackendLastSyncTime": "",
+		"BackendLastBuildTime": "",
+		"BackendLastPushTime": "",
+		"BackendProjectID": "",
+		"BackendProjectName": "",
+		"BackendProjectConsoleUrl": "",
+		"BackendProjectCreationTime": "",
+		"BackendProjectLastUpdatedTime": ""
+	},
+	"initialStage": "clean-slate",
+	"strategy": "link"
+}
