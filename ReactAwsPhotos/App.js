@@ -27,7 +27,11 @@ const instructions = Platform.select({
 
 
 
-
+const federated = {
+    google_client_id: '',
+    facebook_app_id: '',
+    amazon_client_id: ''
+};
 
 Amplify.configure({
     Auth: {
@@ -48,28 +52,29 @@ type Props = {};
 class App extends Component<Props> {
 
   _onButtnSignInPress(){
-    console.log("XXXX SignIn");
+    console.log(">>> XXXX SignIn !!!!");
 
-      const data = await async Auth.signIn("mytest", "111111_Test");
+      // const data = await async Auth.signIn("mytest", "111111_Test");
       // console.log("XXXXX data:" + JSON.stringify(data));
       // if (data.signInUserSession === null) {
-      //   this.setState({ user: data, loading: false, modalShowing: true });
+        // this.setState({ user: data, loading: false, modalShowing: true });
       // }
 
-    // Auth.signIn("mytest", "111111_Test")
-    // .then(user => console.log("XXXXX user:"+ JSON.stringinf(user)))
-    // .catch(err => console.log("XXXXX err:" + JSON.stringify(err)));
+    Auth.signIn("mytest", "111111_Test")
+    .then( res=>{
+        console.log("XXXXX user!!!!");
+    })
+    .catch(err => console.log("XXXXX Err:"));
 
   }
 
   _onButtonSignUpPress(){
     console.log("XXXX SignUp");
     Auth.signUp( {
-        username:"testuser2",
-        password:"123456_Test2",
+        username:"testuser3",
+        password:"111111_Test",
         attributes: {
-          phone:"886922888123",
-          email:"sotagill@gmail.com",
+          email:"saaaass@gmail.com",
         }
     }).then(res => {
       // console.log("XXX signed up:" + JSON.stringify(res));
@@ -97,6 +102,7 @@ class App extends Component<Props> {
         </Text>
         <Button onPress={this._onButtonSignUpPress} title="Sign Up !!!"/>
         <Button onPress={this._onButtnSignInPress} title="Sign IN"/>
+        <Authenticator federated={federated} />
       </View>
     );
   }

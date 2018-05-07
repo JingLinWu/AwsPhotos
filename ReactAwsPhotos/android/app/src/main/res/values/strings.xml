@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ReactAwsPhotos</string>
+    <string name="facebook_app_id">1049578505155773</string>
+    <string name="fb_login_protocol_scheme">fb1231231231232123123</string>
+    <string name="title_activity_fbauthentictor">FBAuthentictorActivity</string>
 </resources>
